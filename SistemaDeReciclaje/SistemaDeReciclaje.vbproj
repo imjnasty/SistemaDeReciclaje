@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A70FBD0C-772A-4BA7-98FA-2E329A68D298}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>SistemaDeReciclaje.My.MyApplication</StartupObject>
+    <RootNamespace>SistemaDeReciclaje</RootNamespace>
+    <AssemblyName>SistemaDeReciclaje</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>SistemaDeReciclaje.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>SistemaDeReciclaje.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>recycle.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 8.0.20\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelo\Conectar.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\BuscarClienteCondominio.Designer.vb">
+      <DependentUpon>BuscarClienteCondominio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\BuscarClienteCondominio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\BuscarClienteDomicilio.Designer.vb">
+      <DependentUpon>BuscarClienteDomicilio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\BuscarClienteDomicilio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CrearClienteCondominio.Designer.vb">
+      <DependentUpon>CrearClienteCondominio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CrearClienteCondominio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\EmpresasClientes.Designer.vb">
+      <DependentUpon>EmpresasClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\EmpresasClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\CrearClienteDomicilio.Designer.vb">
+      <DependentUpon>CrearClienteDomicilio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CrearClienteDomicilio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\BuscarClienteEmpresa.Designer.vb">
+      <DependentUpon>BuscarClienteEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\BuscarClienteEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FechaRetiroCondominio.Designer.vb">
+      <DependentUpon>FechaRetiroCondominio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FechaRetiroCondominio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FechaRetiroDomicilio.Designer.vb">
+      <DependentUpon>FechaRetiroDomicilio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FechaRetiroDomicilio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\GenerarHojaRuta.Designer.vb">
+      <DependentUpon>GenerarHojaRuta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\GenerarHojaRuta.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\GestionPago.Designer.vb">
+      <DependentUpon>GestionPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\GestionPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ModificarClienteCondominio.Designer.vb">
+      <DependentUpon>ModificarClienteCondominio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ModificarClienteCondominio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ModificarClienteDomicilio.Designer.vb">
+      <DependentUpon>ModificarClienteDomicilio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ModificarClienteDomicilio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\ModificarClienteEmpresa.Designer.vb">
+      <DependentUpon>ModificarClienteEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\ModificarClienteEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FechaRetiroEmpresa.Designer.vb">
+      <DependentUpon>FechaRetiroEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FechaRetiroEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormPrincipal.Designer.vb">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Vista\Valorizacion.Designer.vb">
+      <DependentUpon>Valorizacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Valorizacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Ventana.Designer.vb">
+      <DependentUpon>Ventana.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Ventana.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\BuscarClienteCondominio.resx">
+      <DependentUpon>BuscarClienteCondominio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\BuscarClienteDomicilio.resx">
+      <DependentUpon>BuscarClienteDomicilio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CrearClienteCondominio.resx">
+      <DependentUpon>CrearClienteCondominio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\EmpresasClientes.resx">
+      <DependentUpon>EmpresasClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CrearClienteDomicilio.resx">
+      <DependentUpon>CrearClienteDomicilio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\BuscarClienteEmpresa.resx">
+      <DependentUpon>BuscarClienteEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FechaRetiroCondominio.resx">
+      <DependentUpon>FechaRetiroCondominio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FechaRetiroDomicilio.resx">
+      <DependentUpon>FechaRetiroDomicilio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\GenerarHojaRuta.resx">
+      <DependentUpon>GenerarHojaRuta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\GestionPago.resx">
+      <DependentUpon>GestionPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ModificarClienteCondominio.resx">
+      <DependentUpon>ModificarClienteCondominio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ModificarClienteDomicilio.resx">
+      <DependentUpon>ModificarClienteDomicilio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\ModificarClienteEmpresa.resx">
+      <DependentUpon>ModificarClienteEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FechaRetiroEmpresa.resx">
+      <DependentUpon>FechaRetiroEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Valorizacion.resx">
+      <DependentUpon>Valorizacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Ventana.resx">
+      <DependentUpon>Ventana.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controlador\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Normal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reciclaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="recycle.ico" />
+    <None Include="Resources\reportes.png" />
+    <None Include="Resources\compras.png" />
+    <None Include="Resources\pagos.png" />
+    <None Include="Resources\clientes.png" />
+    <None Include="Resources\empleados.png" />
+    <None Include="Resources\WhatsApp Image 2020-05-13 at 08.38.02.jpeg" />
+    <None Include="Resources\WhatsApp Image 2020-05-13 at 08.38.02 %281%29.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
