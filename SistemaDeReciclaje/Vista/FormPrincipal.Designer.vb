@@ -53,6 +53,7 @@ Partial Class FormPrincipal
         Me.btnMinimizar = New System.Windows.Forms.PictureBox()
         Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.Button19 = New System.Windows.Forms.Button()
         Me.PanelContenedor.SuspendLayout()
         Me.PanelFormularios.SuspendLayout()
         Me.FlowLayoutPanel2.SuspendLayout()
@@ -82,6 +83,7 @@ Partial Class FormPrincipal
         'PanelFormularios
         '
         Me.PanelFormularios.BackColor = System.Drawing.Color.White
+        Me.PanelFormularios.Controls.Add(Me.Button19)
         Me.PanelFormularios.Controls.Add(Me.FlowLayoutPanel2)
         Me.PanelFormularios.Controls.Add(Me.ImagenReciclaje)
         Me.PanelFormularios.Dock = System.Windows.Forms.DockStyle.Fill
@@ -484,6 +486,15 @@ Partial Class FormPrincipal
         Me.btnCerrar.TabIndex = 0
         Me.btnCerrar.TabStop = False
         '
+        'Button19
+        '
+        Me.Button19.Location = New System.Drawing.Point(765, 104)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(75, 23)
+        Me.Button19.TabIndex = 3
+        Me.Button19.Text = "Button19"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -543,4 +554,5 @@ Partial Class FormPrincipal
     Friend WithEvents Panelinvisible3 As Panel
     Friend WithEvents FlowLayoutPanel2 As FlowLayoutPanel
     Friend WithEvents Button18 As Button
+    Friend WithEvents Button19 As Button
 End Class
